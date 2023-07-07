@@ -1,0 +1,48 @@
+---Create a store with 5 columns, 15 items, and ordered by price
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, minutes INTEGER, popularity INTEGER);
+
+INSERT INTO store VALUES (1, "Toast", 1.25, 5, 45);
+INSERT INTO store VALUES (2, "Eggs", 2.00, 10, 60);
+INSERT INTO store VALUES (3, "Bacon", 3.00, 6, 95);
+INSERT INTO store VALUES (4, "Sausage Links", 2.50, 8, 35);
+INSERT INTO store VALUES (5, "Sausage Patty",2.50, 8, 75);
+INSERT INTO store VALUES (6, "Egg sandwich", 4.99, 12, 78);
+INSERT INTO store VALUES (7, "Eggs and Grits", 5.99, 15, 36);
+INSERT INTO store VALUES (8, "Cheese Omlette", 4.50, 9, 98);
+INSERT INTO store VALUES (9, "Veggie Omlette", 5.50, 12, 90);
+INSERT INTO store VALUES (10, "Meat Omlette", 7.25, 15, 99);
+INSERT INTO store VALUES (11, "Fruit Bowl", 1.25, 2, 15);
+INSERT INTO store VALUES (12, "Hashbrowns", 2.50, 5, 95);
+INSERT INTO store VALUES (13, "Breakfast Burrito", 8.99, 17, 99);
+INSERT INTO store VALUES (14, "Bagel", 1.25, 2, 30);
+INSERT INTO store VALUES (15, "Shrimp and Grits", 12.50, 19, 76);
+
+---Display columns by price (smallest to biggest)
+
+SELECT *  FROM store
+ORDER BY price asc;
+
+--- Display average price of items with poplularity greater than 50
+
+SELECT AVG(price) "Average Price with Popularity > 50"
+FROM store WHERE popularity > 50;
+
+---Select the top 5 most popular items on the menu (biggest to smallest)
+
+SELECT name, price, minutes, popularity FROM store ODER BY popularity desc LIMIT 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
